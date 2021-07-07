@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Ably C# Publish";
+}
+<form>
+    <div style="text-align: center; padding: 6%;">
+        <div class="card text-white bg-dark mb-3 voting-card">
+            <div class="card-header">Ably 실시간 통신 테스트</div>
+            <div class="card-body">
+                <h5 class="card-title">점심 여론 조사</h5>
+                <p class="card-text">지금 이 밑에서 선택한 버튼들은 누르면 <a href="https://ertestwebsite.herokuapp.com/ablySubscribe" target="_blank">이 웹페이지</a>에 있는 결과값을 실시간으로 변화시켜줍니다.</p>
+                <button name="button" value="1" asp-action="castVote">1. 한식</button>
+                <button name="button" value="2" asp-action="castVote">2. 양식</button>
+                <button name="button" value="3" asp-action="castVote">3. 중식</button>
+                <button name="button" value="4" asp-action="castVote">4. 일식</button>
+            </div>
+        </div>
+    </div>
+</form>
+<div>
+    @TempData["buttonval"]
+</div>
